@@ -82,6 +82,7 @@ img.link-icon {
 
 main {
     flex-grow: 1;
+    position: relative;
 }
 
 main > article {
@@ -89,6 +90,39 @@ main > article {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 3fr 1fr;
     height: 100%;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    transition: transform 400ms ease;
+}
+
+main > article[data-status="inactive"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+main > article[data-status="active"] {
+    transform: translateX(0%);
+}
+
+main > article[data-status="before"] {
+    transform: translateX(-100%);
+}
+
+main > article[data-status="after"] {
+    transform: translateX(100%);
+}
+
+main > article[data-status="becoming-active-from-before"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+main > article[data-status="becoming-active-from-after"] {
+    transform: translateX(100%);
+    transition: none;
 }
 
 main > article > .article-section {
@@ -113,6 +147,18 @@ main > article > section.article-image#ARIN {
     background-size: cover;
 }
 
+main > article > section.article-image#PSU {
+    background: url("img/baremetal.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main > article > section.article-image#ANSYS {
+    background: url("img/ansyshall.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 main > article > section.article-description > ul {
     color: var(--border-color);
     display: flex;
@@ -120,6 +166,8 @@ main > article > section.article-description > ul {
     gap: 2rem;
     margin: 3rem;
     padding: 1rem;
+    font-family: "Roboto Mono";
+    font-size: 1em;
 }
 
 main > article > section.article-title {
@@ -172,7 +220,7 @@ main > article > section.article-nav > button:nth-child(2) {
 main > article > section.article-nav > button:hover img.nav-icon {
     transition: filter var(--transition-time) ease;
     transition: transform var(--transition-time) ease;
-    transform: scale(2.5, 2.5);
+    transform: scale(2, 2);
     filter: invert(90%) sepia(11%) saturate(947%) hue-rotate(194deg)
         brightness(92%) contrast(89%);
 }

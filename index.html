@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" />
+    <!-- PT Sans font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" />
 
     <!-- Scripting -->
     <script src="main.js"></script>
@@ -39,13 +42,14 @@
 
         <section id="contact" class="header-section">
             <!-- Contact -->
-            <i>Portfolio</i>
+            <i>Portfolio Concept</i>
         </section>
     </header>
     <main>
         <!-- Mid-page section with image, desc -->
-        <article>
+        <article data-index="0" data-status="active">
             <!-- ARIN -->
+
             <!-- Image -->
             <section id="ARIN" class="article-image article-section"></section>
 
@@ -77,19 +81,94 @@
 
             <!-- Navigation -->
             <section class="article-nav article-section">
-                <button>
+                <button onclick="handleLeftClick()">
                     <img src="svg/google-arrow_back.svg" class="nav-icon" alt="Back" />
                 </button>
-                <button>
+                <button onclick="handleRightClick()">
                     <img src="svg/google-arrow_forward.svg" class="nav-icon" alt="Forward" />
                 </button>
             </section>
         </article>
-        <article>
+        <article data-index="1" data-status="inactive">
             <!-- PSU -->
+
+            <!-- Image -->
+            <section id="PSU" class="article-image article-section"></section>
+
+            <!-- Description -->
+            <section class="article-description article-section">
+                <ul>
+                    <li>
+                        General purpose CPU design for low-cost ultrasound and
+                        MRI devices
+                    </li>
+                    <li>
+                        Designed Discrete Fourier Transform and Averaging
+                        coprocessors for parallel computation of scale
+                    </li>
+                    <li>
+                        Implemented Baremetal operating systems in ARMv8 for
+                        teaching purposes
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Title -->
+            <section class="article-title article-section">
+                <h1>Research Assistant</h1>
+                <a href="https://github.com/PSU-ChipLab">
+                    CHIP Labs - Penn State University
+                </a>
+            </section>
+
+            <!-- Navigation -->
+            <section class="article-nav article-section">
+                <button onclick="handleLeftClick()">
+                    <img src="svg/google-arrow_back.svg" class="nav-icon" alt="Back" />
+                </button>
+                <button onclick="handleRightClick()">
+                    <img src="svg/google-arrow_forward.svg" class="nav-icon" alt="Forward" />
+                </button>
+            </section>
         </article>
-        <article>
+        <article data-index="2" data-status="inactive">
             <!-- ANSYS -->
+
+            <section id="ANSYS" class="article-image article-section"></section>
+
+            <!-- Description -->
+            <section class="article-description article-section">
+                <ul>
+                    <li>
+                        Focused on feature development and data visualization
+                        for simulation dashboards with Angular framework on Aras
+                        platform
+                    </li>
+                    <li>
+                        Developed electronic CAD and PCB viewer/simulation
+                        interfaces for the electronics business unit used by
+                        NVIDIA
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Title -->
+            <section class="article-title article-section">
+                <h1>Software Developer</h1>
+                <a href="https://www.ansys.com/products/connect/ansys-minerva">
+                    Ansys Minerva
+                </a>
+            </section>
+
+            <!-- Navigation -->
+            <section class="article-nav article-section">
+                <button onclick="handleLeftClick()">
+                    <img src="svg/google-arrow_back.svg" class="nav-icon" alt="Back" />
+                </button>
+                <button onclick="handleRightClick()">
+                    <img src="svg/google-arrow_forward.svg" class="nav-icon" alt="Forward" />
+                </button>
+            </section>
         </article>
     </main>
 
